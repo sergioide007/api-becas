@@ -1,0 +1,7 @@
+---
+applications:
+  - name: becasservice
+    buildpack: java_buildpack
+    path: build/libs/becas-0.0.1-SNAPSHOT.jar
+    services:
+      - mysql
