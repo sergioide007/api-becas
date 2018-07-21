@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="gob.pe.unmsm.becas.alumnos.domain.entity">
+	<class name="AlumnoDoctorado" table="alumno">
+        <id name="id" column="alumno_id">
+            <generator class="native"/>
+        </id>
+        <property name="firstName" column="first_name"/>
+        <property name="lastName" column="last_name"/>
+        <property name="tipoAlumno" column="tipo_alumno"/>
+        <property name="active" column="active"/>
+    </class>
+</hibernate-mapping>

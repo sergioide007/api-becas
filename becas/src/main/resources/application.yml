@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: becasservice
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/becas?verifyServerCertificate=false&useSSL=false&useTimezone=true&serverTimezone=UTC
+    username: root
+    password: 
+    dbcp2:
+      test-on-borrow: true
+      test-while-idle: true
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 30000
+      validation-query: SELECT 1                 
+      max-idle: 10
+      max-wait-millis: 8000
+    
