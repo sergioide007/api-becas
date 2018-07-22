@@ -1,10 +1,8 @@
 package gob.pe.unmsm.becas.alumnos.domain.entity;
 
-import gob.pe.unmsm.becas.alumnos.application.dto.AlumnoDto;
-
 public class Alumno {
 
-	private String id;
+	private Long id;
 	private String firstName;
 	private String lastName;
 	public Boolean active;
@@ -15,7 +13,7 @@ public class Alumno {
 		super();
 	}
 
-	public Alumno(String id, String firstName, String lastName, Boolean active, String tipoAlumno) {
+	public Alumno(Long id, String firstName, String lastName, Boolean active, String tipoAlumno) {
 		super();
 		this.id = id;
 		this.firstName = firstName;
@@ -23,26 +21,12 @@ public class Alumno {
 		this.active = active;
 		this.tipoAlumno = tipoAlumno;
 	}
-	
-	public Alumno(AlumnoDto alumnoDto) {
-		this.id = alumnoDto.getId();
-		this.firstName = alumnoDto.getFirstName();
-		this.lastName = alumnoDto.getLastName();		
-		this.tipoAlumno = alumnoDto.getTipoAlumno();		
-	}
 
-	public Alumno(Alumno alumno) {
-		this.id = alumno.getId();
-		this.firstName = alumno.getFirstName();
-		this.lastName = alumno.getLastName();		
-		this.tipoAlumno = alumno.getTipoAlumno();
-	}	
-
-	public String getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 

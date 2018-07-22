@@ -1,10 +1,18 @@
 package gob.pe.unmsm.becas.alumnos.application.dto;
 
 public class AlumnoDto {
-	private String id;
+	private Long id;
 	private String firstName;
 	private String lastName;
 	private String tipoAlumno;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
 
 	public String getFirstName() {
 		return firstName;
@@ -22,14 +30,6 @@ public class AlumnoDto {
 		this.lastName = lastName;
 	}
 
-	public String getId() {
-		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
-	}
-
 	public String getTipoAlumno() {
 		return tipoAlumno;
 	}
@@ -37,6 +37,5 @@ public class AlumnoDto {
 	public void setTipoAlumno(String tipoAlumno) {
 		this.tipoAlumno = tipoAlumno;
 	}
-	
 
 }

@@ -1,20 +1,18 @@
 package gob.pe.unmsm.becas.alumnos.domain.entity;
 
-import gob.pe.unmsm.becas.alumnos.application.dto.AlumnoDto;
-
 public class AlumnoPregrado extends Alumno {
 
 	public Double montoBecaPregrado = 2000.00;
 	public static final double salarioMinimo = 750;
 
-	public AlumnoPregrado(AlumnoDto alumnoDto) {
-		super(alumnoDto);
+	public AlumnoPregrado() {
+		super();
 	}
 
-	public AlumnoPregrado(Alumno alumno) {
-		super(alumno);
+	public AlumnoPregrado(Long id, String firstName, String lastName, Boolean active, String tipoAlumno) {
+		super(id, firstName, lastName, active, tipoAlumno);
 	}
-	
+
 	@Override
 	public Double calcularMonto() {
 		if (montoBecaPregrado > salarioMinimo) {

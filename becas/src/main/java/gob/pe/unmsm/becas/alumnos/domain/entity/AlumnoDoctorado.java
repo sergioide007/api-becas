@@ -1,7 +1,6 @@
 package gob.pe.unmsm.becas.alumnos.domain.entity;
 
 import gob.pe.unmsm.becas.alumnos.application.BecasService;
-import gob.pe.unmsm.becas.alumnos.application.dto.AlumnoDto;
 
 public class AlumnoDoctorado extends Alumno implements BecasService {
 
@@ -9,12 +8,14 @@ public class AlumnoDoctorado extends Alumno implements BecasService {
 	private double salarioBase = 1400;
 	private double tasaDoctorado = 0.06;
 
-	public AlumnoDoctorado(AlumnoDto alumnoDto) {
-		super(alumnoDto);
+
+
+	public AlumnoDoctorado() {
+		super();
 	}
 
-	public AlumnoDoctorado(Alumno alumno) {
-		super(alumno);
+	public AlumnoDoctorado(Long id, String firstName, String lastName, Boolean active, String tipoAlumno) {
+		super(id, firstName, lastName, active, tipoAlumno);
 	}
 
 	@Override

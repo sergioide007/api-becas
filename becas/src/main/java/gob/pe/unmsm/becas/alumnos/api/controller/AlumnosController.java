@@ -79,10 +79,10 @@ public class AlumnosController {
 	}
 	
 	@CrossOrigin(origins = "*")			
-	@RequestMapping(method = RequestMethod.GET, value = "/calculoBecaByTipoAlumno/alumno/{alumnoId}/tipo/{tipo}")
-	public ResponseEntity<Object> getCalculoBecaByTipoAlumno(@PathVariable(value="alumnoId") long alumnoId, @PathVariable(value="tipo") Optional<String> tipo){
+	@RequestMapping(method = RequestMethod.GET, value = "/calculoBecaByTipoAlumno/tipo/{tipo}")
+	public ResponseEntity<Object> getCalculoBecaByTipoAlumno(@PathVariable(value="tipo") Optional<String> tipo){
 	try {	
-			return null;//alumnoApplicationService.getCalculoBecaByTipoAlumno(alumnoId, tipo);
+			return alumnoApplicationService.getCalculoBecaByTipoAlumno(tipo);
 		} catch(IllegalArgumentException ex) {
 			return this.responseHandler.getAppCustomErrorResponse(ex.getMessage());
 		} catch(Exception ex) {

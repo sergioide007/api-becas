@@ -1,19 +1,19 @@
 package gob.pe.unmsm.becas.alumnos.domain.entity;
 
-import gob.pe.unmsm.becas.alumnos.application.dto.AlumnoDto;
-
 public class AlumnoMaestria extends Alumno {
 
 	public Double montoBecaMaestria = 2500.00;
 	private double salarioBase = 1200;
 	private double tasaMaestria = 0.05;
 
-	public AlumnoMaestria(AlumnoDto alumnoDto) {
-		super(alumnoDto);
+
+	
+	public AlumnoMaestria() {
+		super();
 	}
 
-	public AlumnoMaestria(Alumno alumno) {
-		super(alumno);
+	public AlumnoMaestria(Long id, String firstName, String lastName, Boolean active, String tipoAlumno) {
+		super(id, firstName, lastName, active, tipoAlumno);
 	}
 
 	@Override
